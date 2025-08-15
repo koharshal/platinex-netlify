@@ -1,3 +1,3 @@
-import { TinaAdmin } from 'tinacms/dist/admin'
+import { TinaAdmin } from 'tinacms/dist/admin';
 
-export default TinaAdmin
+export default TinaAdmin;
