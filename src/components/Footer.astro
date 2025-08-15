@@ -1,10 +1,100 @@
 ---
-import { siteConfig } from '@/site-config'
+import { siteConfig } from '../data/site.config'
+import PlatinexLogo from './icons/PlatinexFooterLogo.astro'
+import LinkedinIcon from './icons/LinkedinIcon.astro'
+import WhatsappIcon from './icons/WhatsappIcon.astro'
+import LocationIcon from './icons/LocationIcon.astro'
 
 const today = new Date()
 ---
 
-<footer class='flex justify-center items-center w-full px-16 h-28 border-t-2'>
-	&copy; {today.getFullYear()}
-	{siteConfig.author}. All rights reserved.
+<footer class='bg-stone-50 dark:bg-stone-900/50 border-t border-stone-200 dark:border-white/10'>
+	<div class='max-w-6xl mx-auto px-6 py-12'>
+		<div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+			<!-- Company Info -->
+			<div class='space-y-4'>
+				<PlatinexLogo />
+				<p class='text-stone-600 dark:text-stone-400 text-sm leading-relaxed'>
+					Leading electrical, switchgear and automobile plating service provider in India,
+					delivering quality and precision since inception.
+				</p>
+			</div>
+
+			<!-- Contact Information -->
+			<div class='space-y-4'>
+				<h3 class='font-heading font-semibold text-lg text-stone-900 dark:text-white'>
+					Contact Us
+				</h3>
+				<div class='space-y-3 text-sm'>
+					<div class='flex items-start gap-3'>
+						<LocationIcon class='w-5 h-5 text-accent mt-0.5 flex-shrink-0' />
+						<div>
+							<p class='text-stone-900 dark:text-white font-medium'>Platinex Industries</p>
+							<p class='text-stone-600 dark:text-stone-400'>Plot no. 156/3,</p>
+							<p class='text-stone-600 dark:text-stone-400'>Ambad-Vilholi MIDC Link Road,</p>
+							<p class='text-stone-600 dark:text-stone-400'>Vilholi, Nashik - 422010</p>
+						</div>
+					</div>
+					<div class='flex items-center gap-3'>
+						<div
+							class='w-5 h-5 bg-accent rounded-full flex items-center justify-center flex-shrink-0'
+						>
+							<span class='text-white text-xs'>@</span>
+						</div>
+						<a
+							href='mailto:platinexindustries@gmail.com'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+						>
+							platinexindustries@gmail.com
+						</a>
+					</div>
+					<div class='flex items-center gap-3'>
+						<WhatsappIcon class='w-5 h-5 text-accent flex-shrink-0' />
+						<a
+							href='tel:+918600146841'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+						>
+							(+91) 8600146841
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Social Links -->
+			<div class='space-y-4'>
+				<h3 class='font-heading font-semibold text-lg text-stone-900 dark:text-white'>
+					Connect With Us
+				</h3>
+				<div class='flex gap-4'>
+					<a
+						href='https://www.linkedin.com/company/platinex/'
+						target='_blank'
+						class='p-3 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
+					>
+						<LinkedinIcon class='w-5 h-5' />
+					</a>
+					<a
+						href='https://wa.me/918600146841'
+						target='_blank'
+						class='p-3 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
+					>
+						<WhatsappIcon class='w-5 h-5' />
+					</a>
+					<a
+						href='#contact'
+						class='p-3 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
+					>
+						<LocationIcon class='w-5 h-5' />
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bottom Bar -->
+		<div class='border-t border-stone-200 dark:border-white/10 mt-8 pt-8 text-center'>
+			<p class='text-stone-500 dark:text-stone-400 text-sm'>
+				&copy; {today.getFullYear()} Platinex Industries. All rights reserved.
+			</p>
+		</div>
+	</div>
 </footer>
